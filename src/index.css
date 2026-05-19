@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+/* ============================================================
+   THEME TOKENS  (Tailwind v4 — generates utilities like bg-bg,
+   text-mint, font-display, etc.)
+   ============================================================ */
+@theme {
+  --color-bg: #05060b;
+  --color-bg-2: #080a12;
+  --color-panel: #0c0f18;
+  --color-stroke: rgba(255, 255, 255, 0.09);
+  --color-ink: #eaedf5;
+  --color-muted: #8a92a6;
+  --color-faint: #565e72;
+  --color-mint: #46e6c9;
+  --color-indigo: #7e74ff;
+  --color-amber: #ffb36b;
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-mint);
+  color: #04120f;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-mint), var(--color-indigo));
+  border-radius: 100px;
+  border: 2px solid var(--color-bg);
+}
+
+/* ============================================================
+   REUSABLE UTILITIES
+   ============================================================ */
+.text-gradient {
+  background: linear-gradient(115deg, var(--color-mint), var(--color-indigo) 72%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-stroke);
+}
+
+/* gradient-border card: place .border-glow on an element */
+.border-glow {
+  position: relative;
+}
+.border-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(70, 230, 201, 0.5),
+    transparent 42%,
+    transparent 58%,
+    rgba(126, 116, 255, 0.5)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* film grain overlay */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes drift {
+  to {
+    transform: translate3d(-26px, 20px, 0) scale(1.06);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(70, 230, 201, 0.45);
+  }
+  50% {
+    opacity: 0.4;
+    box-shadow: 0 0 0 7px rgba(70, 230, 201, 0);
+  }
+}
+@keyframes typing-bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+@keyframes flow-y {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+@keyframes flow-x {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 0.9s linear infinite;
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.7s ease-in-out infinite;
+}
+
+/* recharts: remove focus outline on bars/areas */
+.recharts-wrapper :focus {
+  outline: none;
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
