@@ -101,7 +101,7 @@ export function Hero() {
           <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
           <span className="ml-2.5 font-mono text-[11px] text-faint">
-            neuroflow.ai / automation-console
+            neuraloft.ai / automation-console
           </span>
         </div>
 
