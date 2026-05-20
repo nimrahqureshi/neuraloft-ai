@@ -27,7 +27,7 @@ export function Workflow() {
             automatically.
           </>
         }
-        description="Every NeuroFlow system follows the same proven loop: capture, understand, act and respond. No human in the loop unless one is needed."
+        description="Every Neuraloft system follows the same proven loop: capture, understand, act and respond. No human in the loop unless one is needed."
       />
 
       <Reveal>
