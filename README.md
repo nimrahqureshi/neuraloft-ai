@@ -1,4 +1,4 @@
-# NeuroFlow AI — AI Automation Agency Website
+# Neuraloft AI — AI Automation Agency Website
 
 A production-grade, single-page website for an AI automation agency.
 Built with **React 19 + TypeScript + Vite + Tailwind CSS v4**, fully
@@ -27,7 +27,7 @@ Requires **Node.js 20.19+ or 22.12+**.
 ## Project structure
 
 ```
-neuroflow-ai/
+neuraloft-ai/
 ├── index.html                  HTML entry, Google Fonts, meta tags
 ├── package.json                dependencies + scripts
 ├── package-lock.json           locked dependency versions
