@@ -12,9 +12,9 @@ import {
    BRAND
    ============================================================ */
 export const brand = {
-  name: "NeuroFlow",
+  name: "Neuraloft",
   suffix: "AI",
-  email: "hello@neuroflow.ai",
+  email: "neuraloft@gmail.com",
   tagline: "AI Automation Agency",
 };
 
@@ -128,7 +128,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "[Add a real client quote here once you complete a project — describe the problem NeuroFlow solved and the result they saw.]",
+      "[Add a real client quote here once you complete a project — describe the problem Neuraloft solved and the result they saw.]",
     name: "Client Name",
     role: "Role · Company",
   },
@@ -221,7 +221,7 @@ export const faqs: FaqItem[] = [
     a: "No. We handle the build, integrations and training. You get a simple dashboard to monitor conversations, leads and automation health — no code required.",
   },
   {
-    q: "Which tools does NeuroFlow integrate with?",
+    q: "Which tools does Neuraloft integrate with?",
     a: "Common ones include WhatsApp Business, HubSpot, Pipedrive, Gmail/Outlook, Calendly, Shopify and Slack. If you use something else, we can usually connect via API or webhook.",
   },
   {
@@ -301,13 +301,13 @@ export const automationStatus = [
 export const liveThread = [
   { who: "Customer · WhatsApp", role: "user" as const, text: "Hi, do you have the blue jacket in medium?" },
   {
-    who: "NeuroFlow AI",
+    who: "Neuraloft AI",
     role: "bot" as const,
     text: "Yes — 4 in stock. Want me to reserve one and send a checkout link?",
   },
   { who: "Customer · WhatsApp", role: "user" as const, text: "Yes please" },
   {
-    who: "NeuroFlow AI",
+    who: "Neuraloft AI",
     role: "bot" as const,
     text: 'Reserved ✓ Link sent. CRM updated & tagged "hot lead".',
   },
