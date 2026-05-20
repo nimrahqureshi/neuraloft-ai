@@ -55,7 +55,7 @@ export function Contact() {
               business.
             </h2>
             <p className="mt-3.5 text-[15px] text-muted">
-              Tell us a bit about your business and we'll show you exactly what NeuroFlow can
+              Tell us a bit about your business and we'll show you exactly what Neuraloft can
               automate — in a free 20-minute walkthrough.
             </p>
             <div className="mt-6 flex flex-col gap-3">
