@@ -5,7 +5,7 @@ interface LogoProps {
   className?: string;
 }
 
-/** NeuroFlow AI wordmark + glyph. */
+/** Neuraloft AI wordmark + glyph. */
 export function Logo({ className }: LogoProps) {
   return (
     <a
