@@ -15,7 +15,7 @@ export function Results() {
             Results our automations are <span className="text-gradient">built to deliver.</span>
           </>
         }
-        description="Typical impact targets we design NeuroFlow systems around. Replace these with your own verified client numbers as you complete projects."
+        description="Typical impact targets we design Neuraloft systems around. Replace these with your own verified client numbers as you complete projects."
       />
 
       {/* metrics */}
