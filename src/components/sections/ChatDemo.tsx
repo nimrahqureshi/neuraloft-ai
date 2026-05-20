@@ -30,7 +30,7 @@ const features = [
 
 const SEED: Message = {
   role: "bot",
-  text: "Hey 👋 I'm your NeuroFlow AI assistant. I can book appointments, answer pricing questions and pull up your leads. What can I do for you?",
+  text: "Hey 👋 I'm your Neuraloft AI assistant. I can book appointments, answer pricing questions and pull up your leads. What can I do for you?",
 };
 
 /** Front-end AI chat demo — canned, keyword-matched replies with typing indicator. */
@@ -75,10 +75,10 @@ export function ChatDemo() {
         <Reveal>
           <Eyebrow>Live AI Demo</Eyebrow>
           <h2 className="mt-5 font-display text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-[1.08] tracking-[-0.02em]">
-            Talk to a <span className="text-gradient">NeuroFlow agent</span> right now.
+            Talk to a <span className="text-gradient">Neuraloft agent</span> right now.
           </h2>
           <p className="mt-3.5 text-[16px] text-muted">
-            This is a front-end preview of how your customers experience a NeuroFlow AI assistant.
+            This is a front-end preview of how your customers experience a Neuraloft AI assistant.
             Try a prompt below — or type your own.
           </p>
           <div className="mt-6 flex flex-col gap-3.5">
@@ -105,7 +105,7 @@ export function ChatDemo() {
                 <span className="absolute inset-0 m-auto h-3 w-3 rounded-full bg-bg" />
               </div>
               <div>
-                <b className="block font-display text-[14px] font-semibold">NeuroFlow Assistant</b>
+                <b className="block font-display text-[14px] font-semibold">Neuraloft Assistant</b>
                 <span className="font-mono text-[10px] text-mint">
                   ● online · replies in seconds
                 </span>
