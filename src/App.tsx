@@ -21,7 +21,7 @@ import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 
 /**
- * NeuroFlow AI — single-page AI automation agency website.
+ * Neuraloft AI — single-page AI automation agency website.
  * Loader gates the first paint; all sections render behind it.
  */
 export default function App() {
